@@ -1,0 +1,14 @@
+services:
+  holdem-admin:
+    container_name: holdem-admin
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "3501:3501"
+    networks:
+      - base
+
+
+networks:
+  base:
+    external: true
